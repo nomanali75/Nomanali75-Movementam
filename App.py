@@ -47,7 +47,7 @@ st.markdown(
     }
     </style>
 """,
-    unsafe_allow_dict_attachment=True,
+    unsafe_allow_html=True,
 )
 
 
@@ -224,6 +224,7 @@ with tab1:
             * 100,
         }
     )
+    
     st.dataframe(
         telemetry_df.style.format(
             {
@@ -323,38 +324,7 @@ with tab3:
 st.markdown("---")
 st.caption(
     "Published under Apache License 2.0 by **Noman Ali Qazi**"
-)
+  )
 
 
-    st.subheader("Architectural Formulation")
-    st.latex(r"\text{Movementam} = \frac{M \cdot V}{A}")
-    st.subheader("Derived Vector Quantities")
-    st.latex(r"F = \frac{L_m \cdot A}{\Delta t}")
-    st.latex(r"E_k = \frac{1}{2} (L_m \cdot A \cdot v^2)")
 
-    st.markdown(
-        """
-    - **$M$**: Mass of the system ($\text{kg}$)
-    - **$V$**: Exhaust/Particle velocity ($\text{m/s}$)
-    - **$A$**: Cross-sectional aperture area ($\text{m}^2$)
-    """
-    )
-
-    st.subheader("Temporal Wear Attenuation")
-    st.latex(r"l_m(t) = \text{Movementam} \cdot e^{-\lambda t}")
-    st.markdown(
-        """
-    - **$\lambda$**: Wear/attenuation factor ($s^{-1}$)
-    - **$t$**: Time elapsed ($s$)
-    """
-    )
-
-    st.subheader("Derived Vector Quantities")
-    st.latex(r"F = \frac{\text{Movementam} \cdot A}{\Delta t}")
-    st.latex(r"E_k = \frac{1}{2} (\text{Movementam} \cdot A \cdot V)")
-
-    st.markdown("---")
-    st.caption(
-        "Published under Apache License 2.0 by **Noman Ali Qazi** | ORCID: [0009-0006-8858-1357](https://orcid.org/0009-0006-8858-1357)"
-    )
-    
